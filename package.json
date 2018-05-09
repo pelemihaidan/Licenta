@@ -1,0 +1,18 @@
+{
+  "name": "licenta",
+  "version": "1.0.0",
+  "description": "Aplicatie Licenta SPA",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pele Mihai Dan",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.15",
+    "request": "^2.85.0"
+  }
+}
