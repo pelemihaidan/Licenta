@@ -85,7 +85,7 @@ function connect(p) {
     msg.command = "login";
     let arguments = {
         userId : 10456169,
-        password : "0c27d679"
+        password : ""
     };
     msg.arguments = arguments;
     console.log("Trying to log in as: " + msg.arguments.userId);
@@ -117,7 +117,7 @@ let options = {
   url:
     "https://api-fxpractice.oanda.com/v3/accounts/101-004-8316086-001/instruments",
   auth: {
-    bearer: "69577430ab5926403faac0a3055bb498-c05dde36b7a31e93661a07185ff6295e"
+    bearer: ""
   }
 };
 
