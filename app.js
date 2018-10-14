@@ -117,7 +117,7 @@ let options = {
   url:
     "https://api-fxpractice.oanda.com/v3/accounts/101-004-8316086-001/instruments",
   auth: {
-    bearer: ""
+    bearer: "ec38a050a758b10554981226b7041d7d-e08832e0a0d4cb745fc5a821621bc364"
   }
 };
 
