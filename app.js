@@ -24,7 +24,7 @@ let symbolList = {};
 let calendarData = {};
 let newsData = {};
 
-connect("calendar");
+/* connect("calendar");
 function connect(p) {
   let ws = new WebSocket("wss://ws.xapi.pro/demo");
   // Connection to WebSocket
@@ -109,9 +109,7 @@ function connect(p) {
     send(msg);
   }
 }
-
-
-
+ */
 
 let options = {
   url:
@@ -121,6 +119,7 @@ let options = {
   }
 };
 
+// List Route
 app.get("/list", (req, res) => {
   options.url ="https://api-fxpractice.oanda.com/v3/accounts/101-004-8316086-001/instruments";
   request(options, (error, response, body) => {
@@ -130,6 +129,7 @@ app.get("/list", (req, res) => {
     }
   });
 });
+
 // Chart Route
 app.get("/chart", (req, res) => {
   let symbol = req.query.symbol;
@@ -147,15 +147,20 @@ app.get("/chart", (req, res) => {
     }
   });
 });
+
 // Calendar Route
 app.get("/calendar", (req, res) => {
   res.send(calendarData);
 });
+
 // News Route
 app.get("/news", (req, res) => {
   res.send(newsData);
 });
 
+app.get("*", (req,res) => {
+  res.send(__dirname + '/public/index.html');
+})
 // Start Server
 app.listen(port, () => {
   console.log("server started on port : " + port);
